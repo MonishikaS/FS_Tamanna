@@ -1,0 +1,16 @@
+{
+  "name": "E-Commerce Event Pipeline",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "order-service",
+  "workspaceFolder": "/workspace",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "postCreateCommand": "npm install --prefix ui",
+  "forwardPorts": [3000, 3001, 3002, 3003, 3004],
+  "portsAttributes": {
+    "3000": { "label": "React UI" },
+    "3001": { "label": "Order Service" }
+  },
+  "remoteUser": "root"
+}
